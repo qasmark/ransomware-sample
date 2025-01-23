@@ -60,16 +60,30 @@ gcc -o encryptor encryptor.c -lcrypto -Wall
 ## Шифрование
 ```bash
 ./encryptor -e my_document.txt
-./encryptor -e Files
 ```
 
 ## Дешифрование
 ```bash
 ./encryptor -d my_document.txt
-./encryptor -d Files
 ```
 
 ## Шифрование с заданной солью
 ```bash
 ./encryptor -e -s 32 my_document.txt  
+```
+
+
+_____________________
+
+# Miller-Rabin Test
+
+Вероятностный тест для проверки числа на простоту:
+
+Сборка:
+
+```bash
+g++ -o MillerRabin MillerRabin.cpp -lgmp -lgmpxx
+```
+```bash
+g++ -o MillerRabinOptimised MillerRabinOptimised.cpp -lgmp -lgmpxx
 ```
